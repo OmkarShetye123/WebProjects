@@ -1,226 +1,35 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Do You Love Me Priya?</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      min-height: 100dvh;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      padding: 16px;
-    }
-
-    .card {
-      width: min(92vw, 420px);
-      min-height: 320px;
-      background: white;
-      border-radius: 24px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-      text-align: center;
-      padding: clamp(28px, 7vw, 40px) clamp(18px, 5vw, 25px);
-      position: relative;
-    }
-
-    h1 {
-      margin: 0 0 15px;
-      color: #ff4f8b;
-      font-size: clamp(26px, 8vw, 36px);
-    }
-
-    .heart {
-      font-size: clamp(38px, 12vw, 50px);
-      margin-bottom: 28px;
-      animation: beat 1s infinite;
-    }
-
-    @keyframes beat {
-      0%, 100% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.2);
-      }
-    }
-
-    .buttons {
-      position: relative;
-      height: 120px;
-      width: 100%;
-    }
-
-    button {
-      border: none;
-      border-radius: 999px;
-      padding: clamp(12px, 4vw, 14px) clamp(26px, 8vw, 34px);
-      font-size: clamp(16px, 5vw, 18px);
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.2s ease;
-      user-select: none;
-    }
-
-    #yesBtn {
-      background: #ff4f8b;
-      color: white;
-      position: absolute;
-      left: 20%;
-      top: 20px;
-      transform: translateX(-50%);
-    }
-
-    #yesBtn:hover {
-      background: #ff2f78;
-    }
-
-    #noBtn {
-      background: #eeeeee;
-      color: #444;
-      position: absolute;
-      left: 65%;
-      top: 20px;
-      transform: translateX(-50%);
-      touch-action: none;
-    }
-
-    #message {
-      margin-top: 18px;
-      font-size: clamp(18px, 6vw, 24px);
-      color: #ff4f8b;
-      font-weight: bold;
-      display: none;
-    }
-
-    .floating-heart {
-      position: fixed;
-      font-size: 24px;
-      pointer-events: none;
-      animation: floatUp 1.5s ease-out forwards;
-    }
-
-    @keyframes floatUp {
-      0% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-
-      100% {
-        opacity: 0;
-        transform: translateY(-120px) scale(1.8);
-      }
-    }
-
-    @media (max-width: 360px) {
-      .card {
-        min-height: 300px;
-      }
-
-      .buttons {
-        height: 130px;
-      }
-
-      #yesBtn {
-        left: 25%;
-      }
-
-      #noBtn {
-        left: 70%;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#180d2d" />
+<title>A Little Courage, A Lot of Love ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--ink:#180d2d;--plum:#2e1745;--pink:#ff5c93;--peach:#ffc4a4;--cream:#fff7ef;--lav:#cfadff;--muted:#e9cfe8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--cream);font-family:'DM Sans',Arial,sans-serif;overflow-x:hidden}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--peach);outline-offset:5px}.ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 18% 18%,#bd3e7345,transparent 42%),radial-gradient(ellipse at 90% 45%,#6844b845,transparent 48%),linear-gradient(145deg,#180d2d,#301536 58%,#170e2b)}.noise{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.73' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}.progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--pink),var(--peach),var(--lav));z-index:20}.floaties{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.heart{position:absolute;bottom:-10vh;color:#ff9cbd70;animation:rise linear infinite;font-size:20px}@keyframes rise{to{transform:translateY(-120vh) rotate(45deg);opacity:0}}.topbar{position:absolute;top:0;width:100%;padding:24px clamp(20px,5vw,70px);display:flex;justify-content:space-between;align-items:center;z-index:3}.mark{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--peach)}.tiny{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#f6cbdf}.sound{border:1px solid #ffffff45;background:#ffffff13;border-radius:50px;color:white;padding:10px 15px;cursor:pointer}.section{position:relative;min-height:100svh;padding:100px 22px 75px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;isolation:isolate}.hero{padding-top:120px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--peach);margin-bottom:22px}.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(53px,10vw,116px);line-height:1.02;letter-spacing:-.055em;max-width:1100px;margin:0}.serif{font-family:'Playfair Display',Georgia,serif}.italic{font-style:italic}.gradient{background:linear-gradient(100deg,#ff85ad 2%,#ffc5a9 53%,#d8b4ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p,.section-lead{line-height:1.8;color:#f4dbea;max-width:570px;font-size:clamp(15px,2.6vw,19px);margin:30px auto}.glow{position:absolute;width:min(80vw,650px);height:min(80vw,650px);border:1px solid #ff90b333;border-radius:50%;z-index:-1;box-shadow:0 0 100px 20px #ff5c931c,inset 0 0 100px #ff5c9315;animation:pulse 7s ease-in-out infinite}.glow:after{content:'';position:absolute;inset:12%;border:1px solid #ffc4a428;border-radius:50%}@keyframes pulse{50%{transform:scale(1.09);opacity:.6}}.btn{border:0;border-radius:100px;background:linear-gradient(100deg,var(--pink),#ff9476);color:#2b0e2c;padding:17px 28px;font-weight:700;cursor:pointer;box-shadow:0 13px 32px #ff5c9340;transition:transform .25s,box-shadow .25s;display:inline-flex;gap:10px;align-items:center;justify-content:center;text-decoration:none}.btn:hover{transform:translateY(-4px);box-shadow:0 18px 38px #ff5c9360}.btn.secondary{background:#ffffff17;color:white;box-shadow:none;border:1px solid #ffffff54}.scroll-note{position:absolute;bottom:26px;text-transform:uppercase;font-size:10px;letter-spacing:.27em;color:#e8b6d1;animation:bob 2s infinite}@keyframes bob{50%{transform:translateY(7px)}}.kicker{font-family:'Playfair Display',serif;color:var(--peach);font-style:italic;font-size:clamp(22px,5vw,33px);margin-bottom:14px}.heading{font-family:'Playfair Display',serif;font-size:clamp(36px,7vw,74px);line-height:1.12;margin:0;letter-spacing:-.035em;max-width:860px}.panel{background:linear-gradient(140deg,#ffffff1c,#ffffff07);border:1px solid #ffffff32;box-shadow:0 26px 75px #00000025;backdrop-filter:blur(15px);border-radius:28px;padding:clamp(25px,5vw,60px);max-width:740px;width:100%}.panel p{line-height:1.9;color:#f5ddeb;font-size:clamp(16px,2.5vw,19px)}.quote{font-family:'Playfair Display',serif;font-size:clamp(29px,5.5vw,52px);line-height:1.3;margin:10px 0}.quote em{color:var(--peach)}.chapter{position:absolute;top:36px;left:clamp(22px,5vw,70px);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#e4b2ca}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:min(1050px,100%);margin-top:38px}.step{border:1px solid #ffffff34;border-radius:23px;background:#ffffff10;padding:35px 22px;text-align:left;transition:transform .3s,background .3s}.step:hover{transform:translateY(-8px);background:#ffffff1d}.step .emoji{font-size:36px}.step h3{font-family:'Playfair Display',serif;font-size:26px;margin:22px 0 12px;color:#ffe5df}.step p{color:#eacde0;line-height:1.75;margin:0;font-size:14px}.number{font-size:11px;letter-spacing:.2em;color:var(--peach);margin-top:23px}.reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}.love-note{font-family:'Playfair Display',serif;font-size:clamp(27px,5.5vw,55px);line-height:1.34;max-width:860px;margin:18px auto 38px}.pink{color:#ff8db7}.mini{color:var(--muted);max-width:600px;line-height:1.85}.choices{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:25px auto;max-width:680px}.choice{border:1px solid #ffffff55;color:white;background:#ffffff0d;border-radius:50px;padding:14px 20px;cursor:pointer;transition:.3s}.choice.selected{background:var(--peach);color:var(--ink);border-color:var(--peach);transform:scale(1.04)}.choice-output{font-family:'Playfair Display',serif;font-size:clamp(21px,4vw,29px);color:#ffd5e4;max-width:550px;line-height:1.6;min-height:100px}.letter{max-width:700px;text-align:left;position:relative}.letter h2{font-family:'Playfair Display',serif;font-size:clamp(35px,6vw,58px);margin:0 0 18px}.letter p{font-size:clamp(15px,2.7vw,18px);line-height:2;color:#f6dae9}.signature{font-family:'Playfair Display',serif;font-size:29px;font-style:italic;color:var(--peach);margin-top:20px}.separate{height:1px;background:linear-gradient(90deg,transparent,#ffabbd,transparent);margin:32px 0}.end-heart{font-size:62px;display:inline-block;animation:beat 1.8s infinite;color:var(--pink)}@keyframes beat{50%{transform:scale(1.2)}}.foot{font-size:12px;color:#c6a6be;margin-top:30px}.spark{position:fixed;pointer-events:none;z-index:21;animation:sparkle 1100ms ease-out forwards}@keyframes sparkle{from{opacity:1;transform:translate(-50%,-50%) scale(.6)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.7)}}@media(max-width:700px){.topbar{padding:20px}.section{min-height:100svh;padding:100px 23px 85px}.steps{grid-template-columns:1fr;max-width:430px;gap:13px}.step{padding:22px;display:grid;grid-template-columns:45px 1fr;column-gap:15px}.step .emoji{grid-row:span 3}.step h3{font-size:22px;margin:0 0 6px}.step p{font-size:13px}.number{margin-top:11px}.panel{padding:25px 23px}.hero h1{font-size:clamp(55px,13vw,79px)}.love-note{font-size:clamp(28px,7.7vw,42px)}.chapter{top:27px}.choice{font-size:13px;padding:12px 14px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
-
 <body>
-  <div class="card">
-    <h1>Do you love me Priya?</h1>
-
-    <div class="heart">❤️</div>
-
-    <div class="buttons" id="buttonArea">
-      <button id="yesBtn">Yes</button>
-      <button id="noBtn">No</button>
-    </div>
-
-    <div id="message">I knew it! I love you too Priya ❤️</div>
-  </div>
-
-  <script>
-    const yesBtn = document.getElementById("yesBtn");
-    const noBtn = document.getElementById("noBtn");
-    const message = document.getElementById("message");
-    const buttonArea = document.getElementById("buttonArea");
-
-    function moveNoButton() {
-      const areaRect = buttonArea.getBoundingClientRect();
-      const noRect = noBtn.getBoundingClientRect();
-
-      const maxX = areaRect.width - noRect.width;
-      const maxY = areaRect.height - noRect.height;
-
-      const randomX = Math.random() * Math.max(0, maxX);
-      const randomY = Math.random() * Math.max(0, maxY);
-
-      noBtn.style.left = randomX + "px";
-      noBtn.style.top = randomY + "px";
-      noBtn.style.transform = "none";
-    }
-
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.className = "floating-heart";
-      heart.innerText = "❤️";
-
-      heart.style.left = Math.random() * window.innerWidth + "px";
-      heart.style.top = window.innerHeight - 40 + "px";
-
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 1500);
-    }
-
-    yesBtn.addEventListener("click", () => {
-      message.style.display = "block";
-      yesBtn.innerText = "Yay ❤️";
-      noBtn.style.display = "none";
-
-      for (let i = 0; i < 18; i++) {
-        setTimeout(createHeart, i * 80);
-      }
-    });
-
-    noBtn.addEventListener("pointerenter", moveNoButton);
-
-    noBtn.addEventListener("pointerdown", (event) => {
-      event.preventDefault();
-      moveNoButton();
-    });
-
-    noBtn.addEventListener("click", (event) => {
-      event.preventDefault();
-      moveNoButton();
-    });
-
-    window.addEventListener("resize", () => {
-      noBtn.style.left = "65%";
-      noBtn.style.top = "20px";
-      noBtn.style.transform = "translateX(-50%)";
-    });
-  </script>
+<div class="ambient"></div><div class="noise"></div><div class="floaties" id="floaties" aria-hidden="true"></div><div class="progress" id="progress"></div>
+<header class="topbar"><div class="mark">O ♡ P</div><button class="sound" id="sound" aria-label="Toggle gentle sound">♫ Sound off</button></header>
+<main>
+<section class="section hero" id="start"><div class="glow"></div><div class="eyebrow reveal">A little something, just for you</div><h1 class="reveal">Hey, <span class="gradient italic">my love.</span><br>It's us. <span class="gradient">Always.</span></h1><p class="reveal">Not every love story has an easy beginning. But I still believe ours can be something beautiful — one little brave moment at a time.</p><a class="btn reveal" href="#heart">Open my heart <span>↗</span></a><div class="scroll-note">↓ &nbsp; Scroll through our little story</div></section>
+<section class="section" id="heart"><div class="chapter">01 / What I feel</div><div class="kicker reveal">If only you could see...</div><h2 class="heading reveal">How much <span class="gradient italic">you mean to me.</span></h2><p class="section-lead reveal">I know things aren't simple. I know there are rules, worries, expectations, and days when even a small conversation feels difficult.</p><div class="panel reveal"><p class="quote">“I'm not asking for a perfect love story. I'm asking for <em>our real one.</em>”</p><p>One where we're honest, patient, and on the same team — even when the world feels loud.</p></div></section>
+<section class="section" id="noise"><div class="chapter">02 / Above the noise</div><div class="kicker reveal">The world will always have opinions</div><h2 class="heading reveal">But only <span class="gradient italic">we</span> can decide who we are.</h2><div class="panel reveal" style="margin-top:35px"><p>Sometimes other people might say that love won't last, or that one day I'll walk away. I understand how those words can create doubt.</p><p>But please don't let anyone — including me — decide what you should feel. <strong>Know me through my actions. Ask me your questions. Tell me your fears.</strong> Let trust grow from the way we show up for each other.</p><p style="color:var(--peach);font-weight:700">I'd rather we talk through a worry together than let a thousand outside voices speak for us.</p></div></section>
+<section class="section" id="courage"><div class="chapter">03 / A tiny bit of courage</div><div class="kicker reveal">Courage doesn't have to be loud</div><h2 class="heading reveal">Sometimes it's just <span class="gradient italic">one small hello.</span></h2><p class="section-lead reveal">I don't need grand gestures, love. If it feels safe and comfortable for you, could we try a few little things together?</p><div class="steps"><article class="step reveal"><div class="emoji">📞</div><h3>A little call</h3><p>Even a short check-in when your day allows. Hearing your voice would make an ordinary day special.</p><div class="number">01 · WHEN IT FEELS POSSIBLE</div></article><article class="step reveal"><div class="emoji">🎙️</div><h3>A sweet voice note</h3><p>On busy or difficult days, even a tiny “hi, love” can make us feel closer. No pressure to be perfect.</p><div class="number">02 · OUR LITTLE MOMENT</div></article><article class="step reveal"><div class="emoji">🌷</div><h3>Time together</h3><p>Maybe a simple meetup once a week, when it's safe and works for both of us. Even a small walk could mean so much.</p><div class="number">03 · AT OUR PACE</div></article></div></section>
+<section class="section" id="promise"><div class="chapter">04 / My promise</div><div class="kicker reveal">And here's my part...</div><p class="love-note reveal">I promise to put in effort too. To listen when you're scared, to respect your boundaries, and to keep choosing <span class="pink italic">us</span> through actions, not just words.</p><div class="panel reveal"><p>I don't want you to risk your safety, fight everyone, or prove your love to me. I want us to find small, honest ways to feel close that work for both of us. <strong>We're partners — not opponents.</strong></p></div></section>
+<section class="section" id="apology"><div class="chapter">05 / Something I owe you</div><div class="kicker reveal">Before anything else...</div><h2 class="heading reveal">Love, <span class="gradient italic">I'm sorry.</span></h2><p class="section-lead reveal">For comparing our relationship to other people's. For forgetting, even for a moment, that our story has its own circumstances, its own pace, and its own challenges.</p><div class="panel reveal" style="margin-top:18px"><p>I understand that things aren't easy for you. I know there are fears, boundaries, and responsibilities I may not fully experience the way you do. You deserved understanding from me, not comparisons.</p><p class="quote" style="font-size:clamp(27px,5vw,44px)">“When I look at you, I see <em>you</em> — not your situation.”</p><p>I fell in love with who you are, not with how easy or difficult our relationship might be. I don't want you to feel like you have to match someone else's love story to make ours meaningful.</p><p style="color:var(--peach);font-weight:700">I'll try to listen more, compare less, and love you in ways that make you feel understood. ♡</p></div></section>
+<section class="section" id="choice"><div class="chapter">06 / Our first little step</div><div class="kicker reveal">No big decisions today</div><h2 class="heading reveal">What feels <span class="gradient italic">comfortable</span> to start with?</h2><p class="section-lead reveal">Just tap a little possibility. This doesn't send anything or commit you to anything — it's only a wish we can talk about.</p><div class="choices reveal" id="choices"><button class="choice" data-message="A little voice note sounds sweet. No schedule, no pressure — just us, whenever it feels right. ♡">🎙️ A voice note</button><button class="choice" data-message="Even five minutes hearing your voice could feel like the warmest part of my day. ♡">📞 A short call</button><button class="choice" data-message="A simple, safe little meetup would be a lovely memory to make together. ♡">🌷 A little meetup</button><button class="choice" data-message="That's okay, love. We can begin with an honest chat and find our pace together. ♡">💌 Just talk first</button></div><p class="choice-output" id="choiceOutput" aria-live="polite">Whatever you choose, your comfort matters to me. ♡</p><button class="btn secondary" id="heartsBtn">Send a little love ♡</button></section>
+<section class="section" id="letter"><div class="chapter">07 / The letter</div><div class="panel letter reveal"><div class="eyebrow">A note from my heart</div><h2>Dear Priya, <span class="pink">♡</span></h2><p>Love, I know this journey hasn't been easy for you. I see that you're trying to balance your feelings with the circumstances around you, and I don't take that lightly.</p><p>And I need to say this again: I am sorry for comparing us with other relationships. I understand that your situation is different. My love is for <em>you</em>, not for a perfect situation, and I want to do better at showing that.</p><p>I miss your voice, the little conversations, and the moments we haven't gotten to share yet. I hope we can make more room for each other — slowly, carefully, together.</p><p>When fear gets loud, I hope you remember that you can talk to me about it. You don't need to become fearless overnight. I just want us to be brave enough to be honest with each other, one step at a time.</p><p>I'm here because I care about you. And I'd love for us to keep building something real.</p><div class="separate"></div><div class="signature">With love, Omkar ♡</div></div><p class="foot reveal">Made with love, never pressure.</p></section>
+<section class="section" id="ending"><div class="end-heart reveal">♥</div><div class="kicker reveal">One last thing...</div><h2 class="heading reveal">We don't have to have it all figured out.<br><span class="gradient italic">We just have to keep talking.</span></h2><p class="section-lead reveal">I love you. And I'm rooting for us. ♡</p><a class="btn reveal" href="#start">Read it again ↺</a><p class="foot">O + P · Our story is still being written</p></section>
+</main>
+<script>
+const progress=document.querySelector('#progress');const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.13});reveals.forEach(e=>io.observe(e));window.addEventListener('scroll',()=>{const total=document.documentElement.scrollHeight-innerHeight;progress.style.width=(total>0?scrollY/total*100:0)+'%'},{passive:true});
+const floaties=document.querySelector('#floaties');for(let i=0;i<17;i++){const h=document.createElement('span');h.className='heart';h.textContent=i%3===0?'✦':'♥';h.style.left=(i*37+11)%100+'%';h.style.animationDuration=14+i%7*3+'s';h.style.animationDelay=-(i*2.7)+'s';h.style.fontSize=(11+i%4*7)+'px';floaties.appendChild(h)}
+document.querySelectorAll('.choice').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.choice').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.querySelector('#choiceOutput').textContent=btn.dataset.message;burst(innerWidth/2,innerHeight/2,16)}));
+function burst(x,y,n=24){for(let i=0;i<n;i++){let s=document.createElement('span');s.className='spark';s.textContent=i%3?'♥':'✦';s.style.left=x+'px';s.style.top=y+'px';s.style.fontSize=(12+Math.random()*18)+'px';s.style.color=['#ff94b8','#ffc4a4','#cfadff'][i%3];s.style.setProperty('--dx',(Math.random()-.5)*Math.min(340,innerWidth*.8)+'px');s.style.setProperty('--dy',(Math.random()-.5)*440+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),1150)}}document.querySelector('#heartsBtn').addEventListener('click',()=>burst(innerWidth/2,innerHeight*.55,36));
+let audioCtx=null,playing=false,timer=null;const soundBtn=document.querySelector('#sound');function tone(freq,when,duration){let osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(0,when);gain.gain.linearRampToValueAtTime(.022,when+.06);gain.gain.exponentialRampToValueAtTime(.001,when+duration);osc.connect(gain).connect(audioCtx.destination);osc.start(when);osc.stop(when+duration+.03)}function melody(){if(!playing)return;let t=audioCtx.currentTime+.03;[392,493.88,587.33,493.88,440,392].forEach((f,i)=>tone(f,t+i*.38,.58))}soundBtn.addEventListener('click',()=>{if(playing){playing=false;clearInterval(timer);soundBtn.textContent='♫ Sound off';return}try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();playing=true;melody();timer=setInterval(melody,3500);soundBtn.textContent='♫ Sound on'}catch(e){soundBtn.textContent='Sound unavailable'}});document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing){playing=false;clearInterval(timer);soundBtn.textContent='♫ Sound off'}});
+</script>
 </body>
 </html>
