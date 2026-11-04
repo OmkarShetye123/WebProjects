@@ -1,35 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#180d2d" />
-<title>A Little Courage, A Lot of Love ♡</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
-:root{--ink:#180d2d;--plum:#2e1745;--pink:#ff5c93;--peach:#ffc4a4;--cream:#fff7ef;--lav:#cfadff;--muted:#e9cfe8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--cream);font-family:'DM Sans',Arial,sans-serif;overflow-x:hidden}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--peach);outline-offset:5px}.ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 18% 18%,#bd3e7345,transparent 42%),radial-gradient(ellipse at 90% 45%,#6844b845,transparent 48%),linear-gradient(145deg,#180d2d,#301536 58%,#170e2b)}.noise{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.73' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}.progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--pink),var(--peach),var(--lav));z-index:20}.floaties{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.heart{position:absolute;bottom:-10vh;color:#ff9cbd70;animation:rise linear infinite;font-size:20px}@keyframes rise{to{transform:translateY(-120vh) rotate(45deg);opacity:0}}.topbar{position:absolute;top:0;width:100%;padding:24px clamp(20px,5vw,70px);display:flex;justify-content:space-between;align-items:center;z-index:3}.mark{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--peach)}.tiny{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#f6cbdf}.sound{border:1px solid #ffffff45;background:#ffffff13;border-radius:50px;color:white;padding:10px 15px;cursor:pointer}.section{position:relative;min-height:100svh;padding:100px 22px 75px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;isolation:isolate}.hero{padding-top:120px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--peach);margin-bottom:22px}.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(53px,10vw,116px);line-height:1.02;letter-spacing:-.055em;max-width:1100px;margin:0}.serif{font-family:'Playfair Display',Georgia,serif}.italic{font-style:italic}.gradient{background:linear-gradient(100deg,#ff85ad 2%,#ffc5a9 53%,#d8b4ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p,.section-lead{line-height:1.8;color:#f4dbea;max-width:570px;font-size:clamp(15px,2.6vw,19px);margin:30px auto}.glow{position:absolute;width:min(80vw,650px);height:min(80vw,650px);border:1px solid #ff90b333;border-radius:50%;z-index:-1;box-shadow:0 0 100px 20px #ff5c931c,inset 0 0 100px #ff5c9315;animation:pulse 7s ease-in-out infinite}.glow:after{content:'';position:absolute;inset:12%;border:1px solid #ffc4a428;border-radius:50%}@keyframes pulse{50%{transform:scale(1.09);opacity:.6}}.btn{border:0;border-radius:100px;background:linear-gradient(100deg,var(--pink),#ff9476);color:#2b0e2c;padding:17px 28px;font-weight:700;cursor:pointer;box-shadow:0 13px 32px #ff5c9340;transition:transform .25s,box-shadow .25s;display:inline-flex;gap:10px;align-items:center;justify-content:center;text-decoration:none}.btn:hover{transform:translateY(-4px);box-shadow:0 18px 38px #ff5c9360}.btn.secondary{background:#ffffff17;color:white;box-shadow:none;border:1px solid #ffffff54}.scroll-note{position:absolute;bottom:26px;text-transform:uppercase;font-size:10px;letter-spacing:.27em;color:#e8b6d1;animation:bob 2s infinite}@keyframes bob{50%{transform:translateY(7px)}}.kicker{font-family:'Playfair Display',serif;color:var(--peach);font-style:italic;font-size:clamp(22px,5vw,33px);margin-bottom:14px}.heading{font-family:'Playfair Display',serif;font-size:clamp(36px,7vw,74px);line-height:1.12;margin:0;letter-spacing:-.035em;max-width:860px}.panel{background:linear-gradient(140deg,#ffffff1c,#ffffff07);border:1px solid #ffffff32;box-shadow:0 26px 75px #00000025;backdrop-filter:blur(15px);border-radius:28px;padding:clamp(25px,5vw,60px);max-width:740px;width:100%}.panel p{line-height:1.9;color:#f5ddeb;font-size:clamp(16px,2.5vw,19px)}.quote{font-family:'Playfair Display',serif;font-size:clamp(29px,5.5vw,52px);line-height:1.3;margin:10px 0}.quote em{color:var(--peach)}.chapter{position:absolute;top:36px;left:clamp(22px,5vw,70px);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#e4b2ca}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:min(1050px,100%);margin-top:38px}.step{border:1px solid #ffffff34;border-radius:23px;background:#ffffff10;padding:35px 22px;text-align:left;transition:transform .3s,background .3s}.step:hover{transform:translateY(-8px);background:#ffffff1d}.step .emoji{font-size:36px}.step h3{font-family:'Playfair Display',serif;font-size:26px;margin:22px 0 12px;color:#ffe5df}.step p{color:#eacde0;line-height:1.75;margin:0;font-size:14px}.number{font-size:11px;letter-spacing:.2em;color:var(--peach);margin-top:23px}.reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}.love-note{font-family:'Playfair Display',serif;font-size:clamp(27px,5.5vw,55px);line-height:1.34;max-width:860px;margin:18px auto 38px}.pink{color:#ff8db7}.mini{color:var(--muted);max-width:600px;line-height:1.85}.choices{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:25px auto;max-width:680px}.choice{border:1px solid #ffffff55;color:white;background:#ffffff0d;border-radius:50px;padding:14px 20px;cursor:pointer;transition:.3s}.choice.selected{background:var(--peach);color:var(--ink);border-color:var(--peach);transform:scale(1.04)}.choice-output{font-family:'Playfair Display',serif;font-size:clamp(21px,4vw,29px);color:#ffd5e4;max-width:550px;line-height:1.6;min-height:100px}.letter{max-width:700px;text-align:left;position:relative}.letter h2{font-family:'Playfair Display',serif;font-size:clamp(35px,6vw,58px);margin:0 0 18px}.letter p{font-size:clamp(15px,2.7vw,18px);line-height:2;color:#f6dae9}.signature{font-family:'Playfair Display',serif;font-size:29px;font-style:italic;color:var(--peach);margin-top:20px}.separate{height:1px;background:linear-gradient(90deg,transparent,#ffabbd,transparent);margin:32px 0}.end-heart{font-size:62px;display:inline-block;animation:beat 1.8s infinite;color:var(--pink)}@keyframes beat{50%{transform:scale(1.2)}}.foot{font-size:12px;color:#c6a6be;margin-top:30px}.spark{position:fixed;pointer-events:none;z-index:21;animation:sparkle 1100ms ease-out forwards}@keyframes sparkle{from{opacity:1;transform:translate(-50%,-50%) scale(.6)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.7)}}@media(max-width:700px){.topbar{padding:20px}.section{min-height:100svh;padding:100px 23px 85px}.steps{grid-template-columns:1fr;max-width:430px;gap:13px}.step{padding:22px;display:grid;grid-template-columns:45px 1fr;column-gap:15px}.step .emoji{grid-row:span 3}.step h3{font-size:22px;margin:0 0 6px}.step p{font-size:13px}.number{margin-top:11px}.panel{padding:25px 23px}.hero h1{font-size:clamp(55px,13vw,79px)}.love-note{font-size:clamp(28px,7.7vw,42px)}.chapter{top:27px}.choice{font-size:13px;padding:12px 14px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2c1737" />
+  <meta name="description" content="A little love mystery made by Omkar, just for Priya. 💗" />
+  <title>Priya × Omkar | The First Kiss Investigation 💋</title>
+  <style>
+    :root {
+      --ink: #3a223e;
+      --plum: #2c1737;
+      --mauve: #764e72;
+      --hot: #ed5687;
+      --rose: #ff93ad;
+      --blush: #ffe0e6;
+      --cream: #fff9f3;
+      --paper: #fffdfa;
+      --gold: #f9c66f;
+      --line: #edd3d9;
+      --shadow: 0 25px 75px #160a2070;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); font-family: "Trebuchet MS", "Segoe UI", sans-serif; min-height: 100vh;
+      background: radial-gradient(circle at 12% 10%, #583255 0, transparent 30%), radial-gradient(circle at 88% 82%, #61254f 0, transparent 34%), #281630;
+      overflow-x: hidden; }
+    body::before { content: ""; pointer-events:none; position: fixed; inset: 0; opacity: .15; background-image: radial-gradient(#ffcae0 1px, transparent 1px); background-size: 24px 24px; }
+    button { font: inherit; cursor: pointer; }
+    button:focus-visible { outline: 3px solid #c72a74; outline-offset: 4px; }
+    .outer { width: min(100% - 28px, 880px); margin: 28px auto 44px; position: relative; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; align-items: center; color: #fff1f4; margin: 0 8px 14px; }
+    .brand { display: flex; gap: 10px; align-items: center; font-size: 14px; font-weight: 800; letter-spacing: .01em; }
+    .brand-mark { width: 33px; height: 33px; border: 1px solid #e89bbf; background: #ffffff18; display: grid; place-items: center; border-radius: 12px; font-size: 17px; }
+    .case-id { font-size: 11px; font-weight: 800; letter-spacing: .16em; opacity: .78; text-align: right; }
+    .paper { background: var(--paper); border: 5px solid #fff2ed; border-radius: 27px; box-shadow: var(--shadow); overflow: hidden; position: relative; }
+    .paper::before { content: ""; position: absolute; inset: 0; z-index: 0; opacity:.3; pointer-events: none; background-image: linear-gradient(90deg, transparent 97%, #ecdedc 98%); background-size: 56px 56px; }
+    .paper > * { position: relative; z-index: 1; }
+    .ribbon { display: flex; justify-content: space-between; align-items: center; padding: 16px 25px; background: #fff0ed; border-bottom: 2px dashed #e6bac7; gap: 14px; }
+    .ribbon .tag { font-size: 10px; font-weight: 900; letter-spacing: .15em; color: #a25878; }
+    .ribbon .status { font-size: 12px; color: #9f627a; font-weight: 800; white-space: nowrap; }
+    .progress-track { background:#efd4df; height: 5px; overflow: hidden; }
+    .progress-fill { background: linear-gradient(90deg, #ff789b, #d13e80); height: 100%; width: 0%; transition: width .5s ease; border-radius: 0 3px 3px 0; }
+    .screen { display: none; min-height: 520px; animation: enter .43s ease both; }
+    .screen.active { display: block; }
+    @keyframes enter { from { opacity:0; transform: translateY(13px) scale(.988); } to { opacity:1; transform: translateY(0) scale(1); } }
+    h1,h2,h3,p { margin-top: 0; }
+    h1,h2,.serif { font-family: Georgia, "Times New Roman", serif; }
+    h1 { font-size: clamp(39px, 6.3vw, 68px); line-height: 1.06; letter-spacing: -.055em; margin: 14px 0 20px; }
+    h1 em, h2 em { color: #dd427e; font-weight: inherit; font-style: italic; }
+    h2 { font-size: clamp(30px, 5.5vw, 46px); line-height: 1.12; letter-spacing: -.045em; margin: 12px 0 14px; }
+    p { line-height: 1.65; }
+    .eyebrow { font-size: 11px; letter-spacing: .19em; color: #c4507e; font-weight: 900; }
+    .intro-grid { display: grid; grid-template-columns: 1.22fr .78fr; align-items: center; gap: 30px; padding: 55px 49px 32px; }
+    .lead { color: #72536d; line-height: 1.74; font-size: 15px; max-width: 430px; margin-bottom: 26px; }
+    .lead strong { color: #5c385b; }
+    .primary, .secondary { border:0; padding: 15px 24px; font-size: 14px; border-radius: 13px; font-weight: 900; transition: transform .16s, box-shadow .16s, background .16s; }
+    .primary { background: linear-gradient(135deg, #f36191, #da417e); color: white; box-shadow: 0 8px 0 #b53c6c, 0 15px 28px #cf4c8144; }
+    .primary:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 11px 0 #b53c6c, 0 18px 25px #cf4c8144; }
+    .primary:active:not(:disabled) { transform: translateY(4px); box-shadow: 0 4px 0 #b53c6c; }
+    .primary:disabled { opacity:.45; cursor:not-allowed; box-shadow:none; }
+    .secondary { color: #a74771; background: #ffedf2; border: 1px solid #f4cad6; }
+    .secondary:hover { background: #ffe0eb; }
+    .button-row { display:flex; flex-wrap: wrap; gap: 12px; align-items:center; }
+    .tiny-note { font-size: 12px; color:#a08091; margin-top: 16px; }
+    .illustration { display:grid; place-items:center; min-height: 325px; }
+    .polaroid { width: 230px; height: 260px; transform: rotate(7deg); background: #fff; border: 1px solid #f1dbe2; padding: 13px 13px 23px; box-shadow: 0 18px 30px #76526d36; position:relative; }
+    .polaroid::before { content: ""; background: #f8cb9d99; width:90px; height:23px; top:-13px; left: 69px; position:absolute; transform:rotate(-4deg); }
+    .polaroid-pic { background: radial-gradient(circle at 50% 50%, #ffdae5 0, #f6acc6 59%, #ea7da8 100%); width:100%; height:192px; display:grid; place-items:center; position:relative; overflow:hidden; }
+    .big-heart { font-size: 98px; text-shadow:0 8px 0 #c6457a27; animation:float 3.4s ease-in-out infinite; filter:drop-shadow(0 8px 5px #bd497134); }
+    @keyframes float { 0%,100% {transform:translateY(0) rotate(-10deg)} 50% {transform:translateY(-10px) rotate(8deg)} }
+    .polaroid-pic span { position:absolute; color:#fff9; font-size: 20px; }
+    .polaroid-pic span:nth-child(1) {top:10%; left:12%;}
+    .polaroid-pic span:nth-child(2) {bottom:17%; right:7%;}
+    .polaroid-caption { font-family: Georgia, serif; font-style:italic; color:#a05a78; text-align:center; font-size:14px; margin-top:11px; }
+    .scene-file { margin:0 49px 26px; padding:23px 24px 19px; border-radius:20px; border:1px solid #f1d1dd; background:linear-gradient(140deg,#fff4f7,#fffaf5 60%,#fff0f5); box-shadow:0 7px 20px #d573a112; }
+    .scene-label { color:#b34b7b; font-size:10px; font-weight:900; letter-spacing:.13em; }
+    .scene-headline { font:italic 25px/1.23 Georgia,serif; color:#793c61; margin:8px 0 9px; }
+    .scene-copy { color:#75566c; font-size:14px; line-height:1.8; margin:0 0 18px; }
+    .scene-steps { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }
+    .scene-step { background:#fffdfa; border:1px solid #f0dbe3; border-radius:13px; padding:13px 9px; text-align:center; }
+    .scene-step .symbol { display:block; font-size:25px; margin-bottom:7px; }
+    .scene-step strong { display:block; font-size:12px; line-height:1.3; color:#784360; }
+    .scene-step small { display:block; font-size:10px; line-height:1.4; color:#ac8194; margin-top:5px; }
+    .scene-foot { margin:17px 0 0; font-size:12px; line-height:1.6; color:#ae5482; font-weight:800; text-align:center; }
+    .stats { display:flex; gap:7px; padding: 0 49px 34px; flex-wrap:wrap; }
+    .stat { font-size: 11px; border:1px solid #eed4dc; border-radius: 10px; padding: 10px 13px; color:#9c6180; background:#fff8f8; font-weight:800; }
+    .stat b { color:#562746; }
+    .quiz-wrap, .game-wrap { max-width:690px; margin:auto; padding: 49px 28px 55px; }
+    .counter { display:flex; align-items:center; gap:9px; color:#a36c85; font-size:12px; font-weight:900; letter-spacing:.06em; }
+    .counter .circle { width:33px; height:33px; border-radius:50%; display:grid; place-items:center; border: 2px solid #ef8caf; color:#c14378; font-size:13px; }
+    .subcopy { color:#84677c; font-size:15px; max-width:550px; }
+    .answers { display:grid; gap:11px; margin-top:28px; }
+    .answer { display:flex; align-items:center; gap:14px; text-align:left; background:white; color:#684762; padding:17px 19px; border:2px solid #f0dce3; border-radius:14px; font-weight:800; font-size:15px; min-height:68px; transition: .17s; }
+    .answer:hover { border-color:#ed8cb0; background:#fff5f7; transform:translateX(4px); }
+    .answer.selected { background:#ffe2e9; border-color:#e9568b; box-shadow:0 3px 0 #e9568b33; color:#64304d; }
+    .answer-emoji { font-size:26px; line-height:1; flex:0 0 36px; text-align:center; }
+    .selection-note { margin: 18px 0 14px; border-left:4px solid #ed78a5; color:#8d5271; background:#fff1f5; padding: 13px 15px; border-radius: 0 10px 10px 0; min-height:50px; font-size:13px; line-height:1.6; display:none; }
+    .selection-note.visible { display:block; animation:enter .25s ease both; }
+    .quiz-next { margin-top:16px; }
+    .game-board { height:282px; border:2px dashed #db9cba; border-radius:23px; position:relative; overflow:hidden; margin: 24px 0 17px; background: radial-gradient(circle at 70% 30%, #fff0f3, transparent 40%), linear-gradient(145deg, #fbe9ea, #f7c9db); }
+    .game-board::after { content: "EXHIBIT: THE BUTTERFLIES"; position:absolute; bottom:12px; left:16px; font-size:10px; color:#bd7697; font-weight:900; letter-spacing:.15em; pointer-events:none; }
+    .evidence-stamp { position:absolute; top:12px; right:14px; transform:rotate(8deg); border:2px solid #ca739b; border-radius:6px; color:#b45c83; padding:7px; font-size:10px; font-weight:900; letter-spacing:.08em; pointer-events:none; opacity:.8; }
+    .heart-pick { position:absolute; appearance:none; border:0; padding:6px; width:60px; height:60px; border-radius:50%; background:#ffffff8a; font-size:38px; box-shadow:0 8px 20px #c7508740; display:grid; place-items:center; animation:bob 2.5s ease-in-out infinite; touch-action:manipulation; }
+    .heart-pick:hover { transform:scale(1.17); background:white; }
+    .heart-pick:active { transform:scale(.86); }
+    @keyframes bob {0%,100% { box-shadow:0 8px 20px #c7508740;}50% {box-shadow:0 8px 27px #c7508790;} }
+    .heart-pick.collected { animation:pop .34s ease forwards; pointer-events:none; }
+    @keyframes pop {to {scale:1.8; opacity:0;}}
+    .game-progress { display:flex; align-items:center; justify-content:space-between; gap:12px; color:#814c6c; font-weight:900; font-size:13px; }
+    .game-count { background:#fce3ec; padding:9px 13px; border-radius:999px; white-space:nowrap; }
+    .clue-msg { font-size:13px; min-height:20px; color:#a75c80; font-style:italic; }
+    .game-bottom { display:flex; justify-content:space-between; align-items:center; gap:15px; flex-wrap:wrap; margin-top:24px; }
+    .final-wrap { max-width:690px; margin:auto; padding:41px 34px 45px; text-align:center; }
+    .official-seal { display:inline-block; transform: rotate(-4deg); color:#be417a; border: 3px double #be417a; border-radius:7px; padding:9px 13px; font-weight:900; letter-spacing:.13em; font-size:11px; margin:13px 0 13px; }
+    .verdict { border:2px solid #f3c1d2; background:linear-gradient(160deg, #fff2f4, #fffbf9); border-radius:21px; padding:24px 25px; margin:24px 0; box-shadow: 0 12px 20px #ed8ead20; }
+    .verdict .ruling { font: 800 clamp(20px,4vw,30px)/1.3 Georgia,serif; color:#9e3b70; }
+    .verdict .explain {color:#845d73; font-size:14px; margin:14px 0 0;}
+    .confession { text-align:left; background:#fff; border:1px solid #efdae3; border-radius:18px; padding:25px 27px; box-shadow:0 5px 0 #f7e6eb; margin:22px 0; }
+    .confession .letter-title { color:#b74b7c; font:italic 21px Georgia,serif; margin-bottom:12px; }
+    .confession p { color:#62465e; line-height:1.8; font-size:14px; margin:0 0 13px; }
+    .confession p:last-child { margin:0; }
+    .closing { font:italic 24px/1.5 Georgia,serif; color:#a63670; margin:29px auto 24px; max-width:545px; }
+    .kiss-response { margin:18px auto 8px; color:#a73774; font:italic 18px Georgia,serif; min-height:30px; }
+    .small-link { margin-top:16px; border:0; background:transparent; font-size:12px; color:#9c6581; text-decoration: underline; padding:10px; }
+    .footer { text-align:center; color:#eac4d5; font-size:11px; margin-top:17px; letter-spacing:.02em; }
+    .confetti { position:fixed; pointer-events:none; z-index:30; font-size:26px; animation:rain var(--dur,3s) ease-out forwards; left: var(--left); top:-50px; }
+    @keyframes rain { 0% {translate:0 -10px; transform:rotate(0deg);opacity:1;} 80% {opacity:1;} 100% {translate:var(--drift) 105vh; transform:rotate(550deg);opacity:0;} }
+    @media (max-width:650px) {
+      .outer { width: min(100% - 18px, 500px); margin:12px auto 22px; }
+      .paper { border-width:3px; border-radius:20px; }
+      .topbar { margin:0 5px 10px; }
+      .case-id { font-size:9px; max-width:110px; }
+      .brand { font-size:12px; }
+      .ribbon { padding:14px 17px; }
+      .ribbon .tag { font-size:9px; }
+      .ribbon .status { font-size:10px; }
+      .intro-grid { display:flex; flex-direction:column-reverse; gap:14px; text-align:center; padding:18px 22px 10px; }
+      .intro-grid .button-row { justify-content:center; }
+      .illustration { min-height:215px; }
+      .polaroid { width:159px; height:190px; padding:9px; transform:rotate(6deg); }
+      .polaroid::before { width:65px; height:16px; left:43px; top:-9px; }
+      .polaroid-pic { height:143px; }
+      .big-heart { font-size:68px; }
+      .polaroid-caption { margin-top:7px; font-size:11px; }
+      h1 {font-size:clamp(36px,11vw,49px); margin:10px 0 15px;}
+      .lead {font-size:14px; margin-bottom:22px;}
+      .stats { justify-content:center; padding:9px 15px 24px; }
+      .stat {font-size:10px; padding:8px 9px;}
+      .quiz-wrap,.game-wrap { padding:34px 22px 38px; }
+      .answer { font-size:14px; padding:13px 14px; }
+      .game-board {height:275px;}
+      .heart-pick { width:54px; height:54px; font-size:32px; }
+      .final-wrap {padding:31px 18px 35px;}
+      .confession {padding:19px;}
+      .closing {font-size:21px;}
+      .screen { min-height:490px; }
+    }
+    .brand-dept {font-weight:600;opacity:.76;font-size:11px;}
+    .marathi-note {background:linear-gradient(145deg,#ffebf2,#fff5ed);border:1px dashed #e99ebc;border-radius:16px;padding:17px 18px;margin:14px 0 18px;}
+    .marathi-note-label {display:block;color:#c3447e;font-weight:900;letter-spacing:.065em;font-size:10px;margin-bottom:10px;}
+    .confession .marathi-note p {color:#754461;margin:0 0 9px;}
+    .confession .marathi-note p:last-child {margin-bottom:0;}
+    .confession .signature {margin-top:18px;color:#a83c72;font-family:Georgia,serif;font-style:italic;}
+    .gift-title {font-size:11px;letter-spacing:.13em;font-weight:900;color:#a84e7b;margin:16px 0 8px;}
+    .affection-buttons {display:flex;gap:12px;align-items:stretch;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+    .affection {min-height:54px; flex:1 1 220px; max-width:295px;}
+    .proof-strip {margin:15px auto 10px;background:#fff0f4;border:1px solid #f2c9d7;border-radius:12px;padding:13px 15px;font-size:12px;line-height:1.7;color:#89546f;}
+    .proof-strip span {display:block;font-weight:900;letter-spacing:.13em;color:#c24981;font-size:10px;margin-bottom:1px;}
+    @media (max-width:650px) {
+      html,body {max-width:100%;}
+      .scene-file {margin:0 17px 19px;padding:18px 15px 15px;}
+      .scene-headline {font-size:23px;}
+      .scene-copy {font-size:13px;}
+      .scene-steps {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+      .scene-step {padding:12px 7px;}
+
+      .brand-dept {display:none;}
+      .ribbon {gap:8px;}
+      .ribbon .tag {letter-spacing:.06em;}
+      .quiz-wrap,.game-wrap {padding-inline:18px;}
+      .game-board {height:300px;}
+      .marathi-note {padding:14px 13px;}
+      .affection-buttons {gap:10px;}
+      .affection {flex-basis:100%;max-width:none;}
+      .proof-strip {font-size:12px;}
+      .primary,.secondary {touch-action:manipulation;min-height:48px;}
+      .final-wrap {padding-inline:16px;}
+      .verdict {padding:18px 13px;}
+    }
+    @media (max-width:355px) {
+      .brand {font-size:11px;gap:5px;}
+      .brand-mark {width:28px;height:28px;}
+      .case-id {font-size:8px;}
+      .ribbon .tag {font-size:8px;}
+      .ribbon .status {font-size:9px;}
+      .intro-grid {padding-inline:15px;}
+      .quiz-wrap,.game-wrap {padding-inline:13px;}
+      .answer {padding:12px 11px;gap:9px;}
+      .answer-emoji {flex-basis:31px;}
+      .game-board {height:295px;}
+    }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; scroll-behavior:auto!important; }
+    }
+  </style>
 </head>
 <body>
-<div class="ambient"></div><div class="noise"></div><div class="floaties" id="floaties" aria-hidden="true"></div><div class="progress" id="progress"></div>
-<header class="topbar"><div class="mark">O ♡ P</div><button class="sound" id="sound" aria-label="Toggle gentle sound">♫ Sound off</button></header>
-<main>
-<section class="section hero" id="start"><div class="glow"></div><div class="eyebrow reveal">A little something, just for you</div><h1 class="reveal">Hey, <span class="gradient italic">my love.</span><br>It's us. <span class="gradient">Always.</span></h1><p class="reveal">Not every love story has an easy beginning. But I still believe ours can be something beautiful — one little brave moment at a time.</p><a class="btn reveal" href="#heart">Open my heart <span>↗</span></a><div class="scroll-note">↓ &nbsp; Scroll through our little story</div></section>
-<section class="section" id="heart"><div class="chapter">01 / What I feel</div><div class="kicker reveal">If only you could see...</div><h2 class="heading reveal">How much <span class="gradient italic">you mean to me.</span></h2><p class="section-lead reveal">I know things aren't simple. I know there are rules, worries, expectations, and days when even a small conversation feels difficult.</p><div class="panel reveal"><p class="quote">“I'm not asking for a perfect love story. I'm asking for <em>our real one.</em>”</p><p>One where we're honest, patient, and on the same team — even when the world feels loud.</p></div></section>
-<section class="section" id="noise"><div class="chapter">02 / Above the noise</div><div class="kicker reveal">The world will always have opinions</div><h2 class="heading reveal">But only <span class="gradient italic">we</span> can decide who we are.</h2><div class="panel reveal" style="margin-top:35px"><p>Sometimes other people might say that love won't last, or that one day I'll walk away. I understand how those words can create doubt.</p><p>But please don't let anyone — including me — decide what you should feel. <strong>Know me through my actions. Ask me your questions. Tell me your fears.</strong> Let trust grow from the way we show up for each other.</p><p style="color:var(--peach);font-weight:700">I'd rather we talk through a worry together than let a thousand outside voices speak for us.</p></div></section>
-<section class="section" id="courage"><div class="chapter">03 / A tiny bit of courage</div><div class="kicker reveal">Courage doesn't have to be loud</div><h2 class="heading reveal">Sometimes it's just <span class="gradient italic">one small hello.</span></h2><p class="section-lead reveal">I don't need grand gestures, love. If it feels safe and comfortable for you, could we try a few little things together?</p><div class="steps"><article class="step reveal"><div class="emoji">📞</div><h3>A little call</h3><p>Even a short check-in when your day allows. Hearing your voice would make an ordinary day special.</p><div class="number">01 · WHEN IT FEELS POSSIBLE</div></article><article class="step reveal"><div class="emoji">🎙️</div><h3>A sweet voice note</h3><p>On busy or difficult days, even a tiny “hi, love” can make us feel closer. No pressure to be perfect.</p><div class="number">02 · OUR LITTLE MOMENT</div></article><article class="step reveal"><div class="emoji">🌷</div><h3>Time together</h3><p>Maybe a simple meetup once a week, when it's safe and works for both of us. Even a small walk could mean so much.</p><div class="number">03 · AT OUR PACE</div></article></div></section>
-<section class="section" id="promise"><div class="chapter">04 / My promise</div><div class="kicker reveal">And here's my part...</div><p class="love-note reveal">I promise to put in effort too. To listen when you're scared, to respect your boundaries, and to keep choosing <span class="pink italic">us</span> through actions, not just words.</p><div class="panel reveal"><p>I don't want you to risk your safety, fight everyone, or prove your love to me. I want us to find small, honest ways to feel close that work for both of us. <strong>We're partners — not opponents.</strong></p></div></section>
-<section class="section" id="apology"><div class="chapter">05 / Something I owe you</div><div class="kicker reveal">Before anything else...</div><h2 class="heading reveal">Love, <span class="gradient italic">I'm sorry.</span></h2><p class="section-lead reveal">For comparing our relationship to other people's. For forgetting, even for a moment, that our story has its own circumstances, its own pace, and its own challenges.</p><div class="panel reveal" style="margin-top:18px"><p>I understand that things aren't easy for you. I know there are fears, boundaries, and responsibilities I may not fully experience the way you do. You deserved understanding from me, not comparisons.</p><p class="quote" style="font-size:clamp(27px,5vw,44px)">“When I look at you, I see <em>you</em> — not your situation.”</p><p>I fell in love with who you are, not with how easy or difficult our relationship might be. I don't want you to feel like you have to match someone else's love story to make ours meaningful.</p><p style="color:var(--peach);font-weight:700">I'll try to listen more, compare less, and love you in ways that make you feel understood. ♡</p></div></section>
-<section class="section" id="choice"><div class="chapter">06 / Our first little step</div><div class="kicker reveal">No big decisions today</div><h2 class="heading reveal">What feels <span class="gradient italic">comfortable</span> to start with?</h2><p class="section-lead reveal">Just tap a little possibility. This doesn't send anything or commit you to anything — it's only a wish we can talk about.</p><div class="choices reveal" id="choices"><button class="choice" data-message="A little voice note sounds sweet. No schedule, no pressure — just us, whenever it feels right. ♡">🎙️ A voice note</button><button class="choice" data-message="Even five minutes hearing your voice could feel like the warmest part of my day. ♡">📞 A short call</button><button class="choice" data-message="A simple, safe little meetup would be a lovely memory to make together. ♡">🌷 A little meetup</button><button class="choice" data-message="That's okay, love. We can begin with an honest chat and find our pace together. ♡">💌 Just talk first</button></div><p class="choice-output" id="choiceOutput" aria-live="polite">Whatever you choose, your comfort matters to me. ♡</p><button class="btn secondary" id="heartsBtn">Send a little love ♡</button></section>
-<section class="section" id="letter"><div class="chapter">07 / The letter</div><div class="panel letter reveal"><div class="eyebrow">A note from my heart</div><h2>Dear Priya, <span class="pink">♡</span></h2><p>Love, I know this journey hasn't been easy for you. I see that you're trying to balance your feelings with the circumstances around you, and I don't take that lightly.</p><p>And I need to say this again: I am sorry for comparing us with other relationships. I understand that your situation is different. My love is for <em>you</em>, not for a perfect situation, and I want to do better at showing that.</p><p>I miss your voice, the little conversations, and the moments we haven't gotten to share yet. I hope we can make more room for each other — slowly, carefully, together.</p><p>When fear gets loud, I hope you remember that you can talk to me about it. You don't need to become fearless overnight. I just want us to be brave enough to be honest with each other, one step at a time.</p><p>I'm here because I care about you. And I'd love for us to keep building something real.</p><div class="separate"></div><div class="signature">With love, Omkar ♡</div></div><p class="foot reveal">Made with love, never pressure.</p></section>
-<section class="section" id="ending"><div class="end-heart reveal">♥</div><div class="kicker reveal">One last thing...</div><h2 class="heading reveal">We don't have to have it all figured out.<br><span class="gradient italic">We just have to keep talking.</span></h2><p class="section-lead reveal">I love you. And I'm rooting for us. ♡</p><a class="btn reveal" href="#start">Read it again ↺</a><p class="foot">O + P · Our story is still being written</p></section>
-</main>
+  <div class="outer">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">♡</span> PRIYA × OMKAR <span class="brand-dept">· DEPARTMENT OF US</span></div>
+      <div class="case-id">TOP SECRET · PRIYA ONLY<br>CASE FILE NO. 001</div>
+    </header>
+    <main class="paper">
+      <div class="ribbon"><span class="tag">💌 ONLY DETECTIVE PRIYA MAY OPEN</span><span class="status" id="caseStatus">CASE: UNOPENED</span></div>
+      <div class="progress-track" role="progressbar" aria-label="Investigation progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progressTrack"><div class="progress-fill" id="progressFill"></div></div>
+
+      <section class="screen active" id="intro" aria-labelledby="introTitle">
+        <div class="intro-grid">
+          <div>
+            <div class="eyebrow">FILED BY OMKAR · FOR DETECTIVE PRIYA</div>
+            <h1 id="introTitle">Who kissed<br><em>first?</em> 💋</h1>
+            <p class="lead"><strong>Priyaaa,</strong> tu mhantes mi kiss kela first. Mi mhanto tu. 😂 So... shall we investigate? 💋</p>
+            <div class="button-row"><button class="primary" id="startBtn">OPEN THE CASE →</button></div>
+            <div class="tiny-note">CCTV: nahi. Butterflies: khup. 🦋</div>
+          </div>
+          <div class="illustration" aria-hidden="true">
+            <div class="polaroid">
+              <div class="polaroid-pic"><span>✦</span><span>✧</span><div class="big-heart">💗</div></div>
+              <div class="polaroid-caption">Exhibit A: Priya + Omkar ♡</div>
+            </div>
+          </div>
+        </div>
+        <section class="scene-file" aria-label="Reconstruction of our first kiss">
+          <div class="scene-label">♡ EXHIBIT A · THE MOMENT WE REMEMBER</div>
+          <div class="scene-headline">Before the kiss, there was a hug.</div>
+          <p class="scene-copy">Side by side on that chair. <strong>Our first hug.</strong> I cried a little because I'd never felt so loved. And then... <strong>we kissed.</strong> 🥹💗</p>
+          <div class="scene-steps" aria-label="The four moments of our memory">
+            <div class="scene-step"><span class="symbol">🪑</span><strong>Side by side</strong><small>That moment together</small></div>
+            <div class="scene-step"><span class="symbol">🫂</span><strong>Our first hug</strong><small>Instant butterflies</small></div>
+            <div class="scene-step"><span class="symbol">🥹</span><strong>Happy tears</strong><small>Just a little, okay?</small></div>
+            <div class="scene-step"><span class="symbol">💋</span><strong>Our first kiss</strong><small>Best plot twist ever</small></div>
+          </div>
+          <p class="scene-foot">Who leaned in first? Doghanna ekmekach nav ghyaychay. 😂</p>
+        </section>
+        <div class="stats" aria-label="Case statistics">
+          <div class="stat"><b>02</b> witnesses</div><div class="stat"><b>01</b> first kiss</div><div class="stat"><b>00</b> CCTV proofs</div><div class="stat"><b>∞</b> hugs pending</div>
+        </div>
+      </section>
+
+      <section class="screen" id="quiz" aria-labelledby="questionTitle">
+        <div class="quiz-wrap">
+          <div class="counter"><span class="circle" id="qNumber">1</span> <span id="qCounter">WITNESS INTERVIEW · QUESTION 1 OF 4</span></div>
+          <h2 id="questionTitle">The question goes here</h2>
+          <p class="subcopy" id="questionSub"></p>
+          <div class="answers" id="answers"></div>
+          <div class="selection-note" id="selectionNote" role="status" aria-live="polite"></div>
+          <button class="primary quiz-next" id="nextBtn" disabled>NEXT CLUE →</button>
+        </div>
+      </section>
+
+      <section class="screen" id="game" aria-labelledby="gameTitle">
+        <div class="game-wrap">
+          <div class="counter"><span class="circle">♡</span> EVIDENCE COLLECTION · MINI GAME</div>
+          <h2 id="gameTitle">Catch the <em>butterflies.</em> 🦋</h2>
+          <p class="subcopy">Catch all 5 hearts, Priya! Omkar's heart is already gone. 😂💗</p>
+          <div class="game-board" id="gameBoard" aria-label="Tap the five floating hearts">
+            <div class="evidence-stamp">EVIDENCE ROOM ♡</div>
+          </div>
+          <div class="game-progress"><div class="game-count" id="gameCount" aria-live="polite">♡ 0 / 5 HEARTS FOUND</div><div class="clue-msg" id="clueMsg">Detective, you got this!</div></div>
+          <div class="game-bottom"><span class="tiny-note" style="margin:0">Only Omkar’s coolness was harmed. 😭</span><button class="primary" id="verdictBtn" disabled>READ THE VERDICT →</button></div>
+        </div>
+      </section>
+
+      <section class="screen" id="finale" aria-labelledby="finalTitle">
+        <div class="final-wrap">
+          <div class="eyebrow">THE DEPARTMENT OF US · FINAL REPORT</div>
+          <div class="official-seal">♡ CASE CLOSED WITH LOVE ♡</div>
+          <h2 id="finalTitle">The verdict is...<br><em>beautifully inconclusive.</em></h2>
+          <p class="subcopy" style="margin-inline:auto">First hug. A few happy tears. Then a kiss. 🥹<br><br>Omkar: “Priya kissed first.”<br>Priya: “Omkar kissed first.”<br>No CCTV. No liars. Just us. 💗</p>
+          <div class="verdict">
+            <div class="eyebrow" style="margin-bottom:9px">OFFICIAL COURT RULING</div>
+            <div class="ruling">Who kissed first? <em>Mystery unsolved.</em><br>Who proposed first? <em>Omkar. Fact.</em><br>Who loves Priya? ME. EVERY TIME. 💗</div>
+            <p class="explain">Case closed. Extra hugs pending. 🫂</p>
+          </div>
+          <div class="confession">
+            <div class="letter-title">Priya, ek minute... ♡</div>
+            <p>That first hug, my little happy tears... and then our kiss. I still get butterflies thinking about it. 🥹</p>
+            <p>I remember you kissing first. You remember me. Sorry I made you feel like I was changing our story. I wasn't trying to. ❤️</p>
+            <p>And yes, <strong>I proposed first.</strong> Proudly. I'd do it again. 💗</p>
+            <div class="marathi-note"><span class="marathi-note-label">PRIVATE NOTE FOR JUDGE PRIYA 💌</span><p><strong>Aga aik na...</strong> kiss cha CCTV nahiye 😂 Pan tu javal aalis ki majha brain ajun pan hang hoto. Tujhi jhappi ani chotu kisses khup miss kartoy. 🫂💋</p><p>Next time <strong>first hug mi denar.</strong> Proof pan thev! 😌❤️</p></div>
+            <p>Still don't know who kissed first. Still wouldn't change a second of it. ❤️</p>
+            <p class="signature">Forever your very obvious suspect,<br><strong>Omkar ♡</strong></p>
+          </div>
+          <div class="closing">“Who kissed first? Pending. Who do I want to kiss again? You. Obviously. 💋”</div>
+          <div class="gift-title">CASE CLOSED. AFFECTION DELIVERY OPEN. 💌</div>
+          <p class="subcopy" style="margin:0 auto 14px">Your hugs and kisses are ready, madam. 😌</p>
+          <div class="affection-buttons"><button class="secondary affection" id="hugBtn">CLAIM A BIG HUG 🫂</button><button class="primary affection" id="kissBtn">CLAIM YOUR KISS 💋</button></div>
+          <div class="kiss-response" id="kissResponse" role="status" aria-live="polite"></div>
+          <div class="proof-strip"><span>💌 EXHIBIT C</span> This time there is proof: <strong>Omkar made the first move.</strong></div>
+          <button class="small-link" id="restartBtn">↺ Reopen our very serious investigation</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">Made by Omkar, exclusively for Priya · 0% evidence, 1000% love. ♡</footer>
+  </div>
 <script>
-const progress=document.querySelector('#progress');const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.13});reveals.forEach(e=>io.observe(e));window.addEventListener('scroll',()=>{const total=document.documentElement.scrollHeight-innerHeight;progress.style.width=(total>0?scrollY/total*100:0)+'%'},{passive:true});
-const floaties=document.querySelector('#floaties');for(let i=0;i<17;i++){const h=document.createElement('span');h.className='heart';h.textContent=i%3===0?'✦':'♥';h.style.left=(i*37+11)%100+'%';h.style.animationDuration=14+i%7*3+'s';h.style.animationDelay=-(i*2.7)+'s';h.style.fontSize=(11+i%4*7)+'px';floaties.appendChild(h)}
-document.querySelectorAll('.choice').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.choice').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.querySelector('#choiceOutput').textContent=btn.dataset.message;burst(innerWidth/2,innerHeight/2,16)}));
-function burst(x,y,n=24){for(let i=0;i<n;i++){let s=document.createElement('span');s.className='spark';s.textContent=i%3?'♥':'✦';s.style.left=x+'px';s.style.top=y+'px';s.style.fontSize=(12+Math.random()*18)+'px';s.style.color=['#ff94b8','#ffc4a4','#cfadff'][i%3];s.style.setProperty('--dx',(Math.random()-.5)*Math.min(340,innerWidth*.8)+'px');s.style.setProperty('--dy',(Math.random()-.5)*440+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),1150)}}document.querySelector('#heartsBtn').addEventListener('click',()=>burst(innerWidth/2,innerHeight*.55,36));
-let audioCtx=null,playing=false,timer=null;const soundBtn=document.querySelector('#sound');function tone(freq,when,duration){let osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(0,when);gain.gain.linearRampToValueAtTime(.022,when+.06);gain.gain.exponentialRampToValueAtTime(.001,when+duration);osc.connect(gain).connect(audioCtx.destination);osc.start(when);osc.stop(when+duration+.03)}function melody(){if(!playing)return;let t=audioCtx.currentTime+.03;[392,493.88,587.33,493.88,440,392].forEach((f,i)=>tone(f,t+i*.38,.58))}soundBtn.addEventListener('click',()=>{if(playing){playing=false;clearInterval(timer);soundBtn.textContent='♫ Sound off';return}try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();playing=true;melody();timer=setInterval(melody,3500);soundBtn.textContent='♫ Sound on'}catch(e){soundBtn.textContent='Sound unavailable'}});document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing){playing=false;clearInterval(timer);soundBtn.textContent='♫ Sound off'}});
+  "use strict";
+  // A tiny investigation made by Omkar, exclusively for Priya. All content runs offline.
+  const questions = [
+    {
+      title: "Priya, according to <em>your</em> memory... who kissed first?",
+      sub: "Madam, tumcha statement please. 😌",
+      options: [
+        ["😌", "Omkar kissed me first. OBVIOUSLY."],
+        ["😳", "Wait... maybe I kissed Omkar first?"],
+        ["💫", "We both leaned in together."],
+        ["🥹", "I just remember how it felt."]
+      ],
+      reactions: [
+        "Objection! Omkar remembers it differently. 😂💗",
+        "PLOT TWIST. Omkar is taking notes. 👀",
+        "Same brain cell. Same moment. 😂",
+        "Okay, this one made me smile. 🦋"
+      ]
+    },
+    {
+      title: "Which detail from that <em>first-kiss moment</em> gets you?",
+      sub: "Chair, first hug, a few tears... then 💋",
+      options: [
+        ["🪑", "Sitting right next to each other."],
+        ["🫂", "Our very first hug. That one."],
+        ["🥹", "Omkar getting a little teary from all the love."],
+        ["💋", "The kiss that happened in the middle of it all."]
+      ],
+      reactions: [
+        "Aplya doghanchi cute movie scene. 🦋",
+        "That hug... 🫂💗",
+        "Only 2-3 tears, okay?! 😭😂",
+        "Best plot twist. 💋"
+      ]
+    },
+    {
+      title: "What should go into our <em>forever</em> memory box?",
+      sub: "Pick one. (I know, impossible.)",
+      options: [
+        ["💋", "Our kisses — the tiny ones and the long ones."],
+        ["🫂", "Those warm, don't-let-go hugs."],
+        ["🤝", "Holding hands and little touches."],
+        ["💕", "All of it. I refuse to choose."]
+      ],
+      reactions: [
+        "Unlimited kisses? Noted. 💋",
+        "Okay, no letting go. 🫂",
+        "Haat sodu nakos. 🥹",
+        "Obviously. Saglach pahije. 😂"
+      ]
+    },
+    {
+      title: "Judge Priya, what is your <em>final order?</em>",
+      sub: "Omkar la kay punishment? 😭",
+      options: [
+        ["🫂", "One extremely long hug. No escaping."],
+        ["💋", "A hundred kisses, minimum."],
+        ["🥰", "Omkar plans our next cute date."],
+        ["👑", "All of the above. I'm the judge."]
+      ],
+      reactions: [
+        "Done. No escape. 🫂",
+        "100? Make it 101. 😂💋",
+        "Deal! Date mi plan karto. 💌",
+        "Judge madam wins. Always. 💗"
+      ]
+    }
+  ];
+
+  const $ = id => document.getElementById(id);
+  let questionIndex = 0;
+  let answers = [];
+  let heartCount = 0;
+  let kissClaimed = false;
+  let hugClaimed = false;
+  const screens = ["intro", "quiz", "game", "finale"];
+
+  function showScreen(id) {
+    for (const s of screens) { $(s).classList.toggle("active", s === id); }
+    const values = {intro:0, quiz: 12 + (questionIndex * 15), game:77, finale:100};
+    const progress = values[id];
+    $("progressFill").style.width = progress + "%";
+    $("progressTrack").setAttribute("aria-valuenow", String(progress));
+    $("caseStatus").textContent = ({intro:"CASE: UNOPENED",quiz:"CASE: INVESTIGATING",game:"CASE: COLLECTING CLUES",finale:"CASE: CLOSED ♡"})[id];
+    window.scrollTo({top:0,behavior:"smooth"});
+  }
+
+  function renderQuestion() {
+    const q = questions[questionIndex];
+    $("qNumber").textContent = questionIndex + 1;
+    $("qCounter").textContent = `WITNESS INTERVIEW · QUESTION ${questionIndex + 1} OF ${questions.length}`;
+    $("questionTitle").innerHTML = q.title; // Titles are hardcoded above, not user input.
+    $("questionSub").textContent = q.sub;
+    $("answers").innerHTML = "";
+    $("selectionNote").classList.remove("visible");
+    $("nextBtn").disabled = true;
+    $("nextBtn").textContent = questionIndex === questions.length - 1 ? "COLLECT THE EVIDENCE →" : "NEXT CLUE →";
+    q.options.forEach(([emoji, label], i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "answer";
+      b.setAttribute("aria-pressed", "false");
+      const emo = document.createElement("span"); emo.className = "answer-emoji"; emo.textContent = emoji;
+      const text = document.createElement("span"); text.textContent = label;
+      b.append(emo,text);
+      b.addEventListener("click", () => {
+        answers[questionIndex] = i;
+        for (const sibling of $("answers").children) {
+          sibling.classList.remove("selected"); sibling.setAttribute("aria-pressed","false");
+        }
+        b.classList.add("selected"); b.setAttribute("aria-pressed","true");
+        $("selectionNote").textContent = q.reactions[i];
+        $("selectionNote").classList.add("visible");
+        $("nextBtn").disabled = false;
+      });
+      $("answers").append(b);
+    });
+    showScreen("quiz");
+  }
+
+  function startGame() {
+    heartCount = 0;
+    $("gameCount").textContent = "♡ 0 / 5 HEARTS FOUND";
+    $("clueMsg").textContent = "Judge Priya, you got this!";
+    $("verdictBtn").disabled = true;
+    const board = $("gameBoard");
+    board.querySelectorAll(".heart-pick").forEach(h => h.remove());
+    const hearts = [
+      {x:15,y:24,e:"💗",label:"Our spark"},
+      {x:73,y:24,e:"🫂",label:"Our hugs"},
+      {x:43,y:42,e:"🦋",label:"The butterflies"},
+      {x:16,y:70,e:"💋",label:"Our kisses"},
+      {x:76,y:73,e:"💝",label:"Our love"}
+    ];
+    hearts.forEach((h,i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "heart-pick";
+      b.textContent = h.e;
+      b.style.left = `calc(${h.x}% - 27px)`;
+      b.style.top = `calc(${h.y}% - 27px)`;
+      b.style.animationDelay = `${i * -.27}s`;
+      b.setAttribute("aria-label", `Collect heart ${i+1}: ${h.label}`);
+      b.addEventListener("click", () => {
+        if (b.classList.contains("collected")) return;
+        b.classList.add("collected");
+        heartCount++;
+        $("gameCount").textContent = `♡ ${heartCount} / 5 HEARTS FOUND`;
+        $("clueMsg").textContent = ["Our spark! ✨", "One warm hug! 🫂", "Butterflies! 🦋", "All the kisses! 💋", "And all my love, Priya. ♡"][heartCount-1];
+        if(heartCount === 5) {
+          $("verdictBtn").disabled = false;
+          $("clueMsg").textContent = "All clues collected. The truth awaits! 💌";
+        }
+      });
+      board.append(b);
+    });
+    showScreen("game");
+  }
+
+  function showerHearts() {
+    const symbols = ["💗", "💕", "💖", "💋", "✨", "💘"];
+    for (let i=0; i<38; i++) {
+      const bit = document.createElement("span");
+      bit.className = "confetti";
+      bit.textContent = symbols[i % symbols.length];
+      bit.style.setProperty("--left", `${Math.random()*100}vw`);
+      bit.style.setProperty("--drift", `${(Math.random()-.5)*180}px`);
+      bit.style.setProperty("--dur", `${2.5+Math.random()*1.9}s`);
+      bit.style.animationDelay = `${Math.random()*.7}s`;
+      bit.setAttribute("aria-hidden", "true");
+      document.body.append(bit);
+      setTimeout(()=>bit.remove(), 5800);
+    }
+  }
+
+  $("startBtn").addEventListener("click", () => { questionIndex=0; answers=[]; renderQuestion(); });
+  $("nextBtn").addEventListener("click", () => {
+    if (answers[questionIndex] === undefined) return;
+    if (questionIndex < questions.length - 1) { questionIndex++; renderQuestion(); }
+    else startGame();
+  });
+  $("verdictBtn").addEventListener("click", () => {
+    if (heartCount !== 5) return;
+    showScreen("finale");
+    showerHearts();
+  });
+  $("kissBtn").addEventListener("click", () => {
+    kissClaimed = true;
+    $("kissResponse").textContent = "Mwaaah, Priya! 💋 This kiss was sent FIRST by Omkar. Finally, proof the court can use. 😌❤️";
+    $("kissBtn").textContent = "KISS SENT BY OMKAR ♡";
+    showerHearts();
+  });
+  $("hugBtn").addEventListener("click", () => {
+    hugClaimed = true;
+    $("kissResponse").textContent = "Aga Priyaaa, ek mothiii jhappi! 🫂💗 Real-life delivery pending until we meet. - Omkar";
+    $("hugBtn").textContent = "HUG RESERVED FOR PRIYA ♡";
+    showerHearts();
+  });
+  $("restartBtn").addEventListener("click", () => {
+    questionIndex=0; answers=[]; heartCount=0; kissClaimed=false; hugClaimed=false;
+    $("kissBtn").textContent = "CLAIM YOUR KISS 💋";
+    $("hugBtn").textContent = "CLAIM A BIG HUG 🫂";
+    $("kissResponse").textContent = "";
+    showScreen("intro");
+  });
 </script>
 </body>
 </html>
